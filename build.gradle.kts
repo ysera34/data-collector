@@ -1,5 +1,8 @@
 val kotlinVersion: String by project
+val kotlinxCoroutinesReactorVersion: String by project
 val springBootVersion: String by project
+val jacksonModuleKotlinVersion: String by project
+val reactorKotlinExtensionsVersion: String by project
 val ktlintVersion: String by project
 
 buildscript {
@@ -53,16 +56,15 @@ subprojects {
     }
 
     dependencies {
-        implementation("org.springframework.boot:spring-boot-starter-web")
-        implementation("org.springframework.boot:spring-boot-starter-webflux")
-        implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-        implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
-        implementation("org.jetbrains.kotlin:kotlin-reflect")
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-        testImplementation("org.springframework.boot:spring-boot-starter-test")
-        testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
-        testImplementation("io.projectreactor:reactor-test")
+        implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+        implementation("org.springframework.boot:spring-boot-starter-webflux:$springBootVersion")
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb:$springBootVersion")
+        implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:$springBootVersion")
+        implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModuleKotlinVersion")
+        implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:$reactorKotlinExtensionsVersion")
+        implementation("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$kotlinxCoroutinesReactorVersion")
     }
 
     java {
