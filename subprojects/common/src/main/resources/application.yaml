@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://mongodbuser:mongodbpassword@cluster0.vs8i6.mongodb.net/sample_airbnb?retryWrites=true
+      database: sample_airbnb
