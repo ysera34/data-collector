@@ -58,6 +58,7 @@ subprojects {
     dependencies {
         implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
         implementation("org.springframework.boot:spring-boot-starter-webflux:$springBootVersion")
+        implementation("org.springframework.boot:spring-boot-starter-data-rest:$springBootVersion")
         implementation("org.springframework.boot:spring-boot-starter-data-mongodb:$springBootVersion")
         implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive:$springBootVersion")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModuleKotlinVersion")
